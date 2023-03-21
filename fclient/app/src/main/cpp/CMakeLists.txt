@@ -3,7 +3,7 @@
 
 # Sets the minimum version of CMake required to build the native library.
 
-cmake_minimum_required(VERSION 3.22.1)
+cmake_minimum_required(VERSION 3.18.1)
 
 # Declares and names the project.
 
@@ -15,7 +15,7 @@ project("fclient")
 # Gradle automatically packages shared libraries with your APK.
 
 add_library( # Sets the name of the library.
-        fclient
+        native-lib
 
         # Sets the library as a shared library.
         SHARED
@@ -40,22 +40,24 @@ find_library( # Sets the name of the path variable.
 # can link multiple libraries, such as libraries you define in this
 # build script, prebuilt third-party libraries, or system libraries.
 
-target_link_libraries( # Specifies the target library.
-        fclient
-
-        # Links the target library to the log library
-        # included in the NDK.
-        ${log-lib})
+target_include_directories(native-lib PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../libs/spdlog/spdlog/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../libs/mbedtls/mbedtls/include
+        )
 
 add_library(spdlog STATIC IMPORTED)
 set_target_properties(spdlog PROPERTIES IMPORTED_LOCATION
-        Users/User/AndroidStudioProjects/libs/spdlog/build/x86_64/libspdlog.a)
-target_include_directories(fclient PUBLIC
-        Users/User/AndroidStudioProjects/libs/spdlog/spdlog/include)
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../libs/spdlog/build/${ANDROID_ABI}/libspdlog.a)
+
+add_library(mbedcrypto SHARED IMPORTED)
+set_target_properties(mbedcrypto PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_CURRENT_SOURCE_DIR}/../nativeLibs/${ANDROID_ABI}/libmbedcrypto.so)
+
 
 target_link_libraries( # Specifies the target library.
-        fclient
+        native-lib
         spdlog
+        mbedcrypto
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib} )
