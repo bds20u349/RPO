@@ -10,7 +10,12 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
+interface TransactionEvents {
+    String enterPin(int ptc, String amount);
+    void transactionResult(boolean result);
+}
 public class PinpadActivity extends AppCompatActivity {
+
 
     TextView tvPin;
     String pin = "";
@@ -23,6 +28,24 @@ public class PinpadActivity extends AppCompatActivity {
 
         tvPin = findViewById(R.id.txtPin);
 
+        TextView ta = findViewById(R.id.txtAmount);
+        String amt = String.valueOf(getIntent().getStringExtra("amount"));
+        Long f = Long.valueOf(amt);
+        DecimalFormat df = new DecimalFormat("#,###,###,##0.00");
+        String s = df.format(f);
+        ta.setText("Сумма: " + s);
+
+        TextView tp = findViewById(R.id.txtPtc);
+        int pts = getIntent().getIntExtra("ptc", 0);
+        if (pts == 2)
+            tp.setText("Осталось две попытки");
+        else if (pts == 1)
+            tp.setText("Осталась одна попытка");
+
+
+
+        ShuffleKeys();
+
         findViewById(R.id.btnOK).setOnClickListener((View) -> {
             Intent it = new Intent();
             it.putExtra("pin", pin);
@@ -30,33 +53,14 @@ public class PinpadActivity extends AppCompatActivity {
             finish();
         });
 
+
         findViewById(R.id.btnReset).setOnClickListener((View) -> {
             pin = "";
             tvPin.setText("");
         });
-
-        // Обработка txtAmount
-        TextView ta = findViewById(R.id.txtAmount);
-
-        String amt = String.valueOf(getIntent().getStringExtra("amount"));
-        Long f = Long.valueOf(amt);
-        DecimalFormat df = new DecimalFormat("#,###,###,##0.00");
-        String s = df.format(f);
-
-        ta.setText("Сумма: " + s);
-
-        // Обработка txtPtc
-        TextView tp = findViewById(R.id.txtPtc);
-        int pts = getIntent().getIntExtra("ptc", 0);
-        if (pts == 2) {
-            tp.setText("Осталось две попытки");
-        } else if (pts == 1) {
-            tp.setText("Осталась одна попытка");
-        }
     }
 
 
-    //Обработчики кнопок ввода цифр
     public void keyClick(View v)
     {
         String key = ((TextView)v).getText().toString();
@@ -67,4 +71,32 @@ public class PinpadActivity extends AppCompatActivity {
             tvPin.setText("****".substring(3 - sz));
         }
     }
+
+
+    protected void ShuffleKeys()
+    {
+        Button keys[] = new Button[] {
+                findViewById(R.id.btnKey0),
+                findViewById(R.id.btnKey1),
+                findViewById(R.id.btnKey2),
+                findViewById(R.id.btnKey3),
+                findViewById(R.id.btnKey4),
+                findViewById(R.id.btnKey5),
+                findViewById(R.id.btnKey6),
+                findViewById(R.id.btnKey7),
+                findViewById(R.id.btnKey8),
+                findViewById(R.id.btnKey9),
+        };
+
+        byte[] rnd = MainActivity.randomBytes(MAX_KEYS);
+        for(int i = 0; i < MAX_KEYS; i++)
+        {
+            int idx = (rnd[i] & 0xFF) % 10;
+            CharSequence txt = keys[idx].getText();
+            keys[idx].setText(keys[i].getText());
+            keys[i].setText(txt);
+        }
+    }
+
+
 }

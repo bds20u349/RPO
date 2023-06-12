@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /home/user/Android/Sdk/cmake/3.22.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /home/user/Android/Sdk/cmake/3.22.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/19690612/Desktop/rpo22/libs/mbedtls/mbedtls
+CMAKE_SOURCE_DIR = /home/user/Projects/RPO/libs/mbedtls/mbedtls
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64
+CMAKE_BINARY_DIR = /home/user/Projects/RPO/libs/mbedtls/build/x86_64
 
 # Utility rule file for apidoc.
 
@@ -67,7 +67,7 @@ include CMakeFiles/apidoc.dir/compiler_depend.make
 include CMakeFiles/apidoc.dir/progress.make
 
 CMakeFiles/apidoc:
-	cd /Users/19690612/Desktop/rpo22/libs/mbedtls/mbedtls/doxygen && doxygen mbedtls.doxyfile
+	cd /home/user/Projects/RPO/libs/mbedtls/mbedtls/doxygen && doxygen mbedtls.doxyfile
 
 apidoc: CMakeFiles/apidoc
 apidoc: CMakeFiles/apidoc.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/apidoc.dir/clean:
 .PHONY : CMakeFiles/apidoc.dir/clean
 
 CMakeFiles/apidoc.dir/depend:
-	cd /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/19690612/Desktop/rpo22/libs/mbedtls/mbedtls /Users/19690612/Desktop/rpo22/libs/mbedtls/mbedtls /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64 /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64 /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/CMakeFiles/apidoc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/Projects/RPO/libs/mbedtls/build/x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/Projects/RPO/libs/mbedtls/mbedtls /home/user/Projects/RPO/libs/mbedtls/mbedtls /home/user/Projects/RPO/libs/mbedtls/build/x86_64 /home/user/Projects/RPO/libs/mbedtls/build/x86_64 /home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/apidoc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/apidoc.dir/depend
 

@@ -1,19 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp
+Change Dir: /home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_c94d7/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c94d7.dir/build.make CMakeFiles/cmTC_c94d7.dir/build
-Building C object CMakeFiles/cmTC_c94d7.dir/src.c.o
-/Users/19690612/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=x86_64-none-linux-android21 --sysroot=/Users/19690612/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -Wall -Wextra -Wwrite-strings -Wpointer-arith -Wimplicit-fallthrough -Wshadow -Wvla -Wformat=2 -Wno-format-nonliteral -Werror  -O2 -g -DNDEBUG -fPIE -MD -MT CMakeFiles/cmTC_c94d7.dir/src.c.o -MF CMakeFiles/cmTC_c94d7.dir/src.c.o.d -o CMakeFiles/cmTC_c94d7.dir/src.c.o -c /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp/src.c
-/Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp/src.c:13:3: error: implicit declaration of function 'pthread_cancel' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1e8e0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1e8e0.dir/build.make CMakeFiles/cmTC_1e8e0.dir/build
+gmake[1]: Entering directory '/home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1e8e0.dir/src.c.o
+/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=x86_64-none-linux-android21 --sysroot=/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -Wall -Wextra -Wwrite-strings -Wpointer-arith -Wimplicit-fallthrough -Wshadow -Wvla -Wformat=2 -Wno-format-nonliteral -Werror  -fPIE -MD -MT CMakeFiles/cmTC_1e8e0.dir/src.c.o -MF CMakeFiles/cmTC_1e8e0.dir/src.c.o.d -o CMakeFiles/cmTC_1e8e0.dir/src.c.o -c /home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp/src.c
+/home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp/src.c:13:3: error: implicit declaration of function 'pthread_cancel' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
   pthread_cancel(thread);
   ^
-/Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp/src.c:13:3: note: did you mean 'pthread_once'?
-/Users/19690612/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/pthread.h:275:5: note: 'pthread_once' declared here
+/home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp/src.c:13:3: note: did you mean 'pthread_once'?
+/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/pthread.h:275:5: note: 'pthread_once' declared here
 int pthread_once(pthread_once_t* __once, void (*__init_routine)(void));
     ^
 1 error generated.
-make[1]: *** [CMakeFiles/cmTC_c94d7.dir/src.c.o] Error 1
-make: *** [cmTC_c94d7/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_1e8e0.dir/build.make:79: CMakeFiles/cmTC_1e8e0.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_1e8e0/fast] Error 2
 
 
 Source file was:
@@ -38,34 +40,38 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp
+Change Dir: /home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_1e3c0/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_1e3c0.dir/build.make CMakeFiles/cmTC_1e3c0.dir/build
-Building C object CMakeFiles/cmTC_1e3c0.dir/CheckFunctionExists.c.o
-/Users/19690612/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=x86_64-none-linux-android21 --sysroot=/Users/19690612/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -Wall -Wextra -Wwrite-strings -Wpointer-arith -Wimplicit-fallthrough -Wshadow -Wvla -Wformat=2 -Wno-format-nonliteral -Werror -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -fPIE -MD -MT CMakeFiles/cmTC_1e3c0.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_1e3c0.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_1e3c0.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.22.2/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTC_1e3c0
-/usr/local/Cellar/cmake/3.22.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e3c0.dir/link.txt --verbose=1
-/Users/19690612/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=x86_64-none-linux-android21 --sysroot=/Users/19690612/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -Wall -Wextra -Wwrite-strings -Wpointer-arith -Wimplicit-fallthrough -Wshadow -Wvla -Wformat=2 -Wno-format-nonliteral -Werror -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections  CMakeFiles/cmTC_1e3c0.dir/CheckFunctionExists.c.o -o cmTC_1e3c0  -lpthreads  -latomic -lm 
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a05eb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a05eb.dir/build.make CMakeFiles/cmTC_a05eb.dir/build
+gmake[1]: Entering directory '/home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a05eb.dir/CheckFunctionExists.c.o
+/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=x86_64-none-linux-android21 --sysroot=/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -Wall -Wextra -Wwrite-strings -Wpointer-arith -Wimplicit-fallthrough -Wshadow -Wvla -Wformat=2 -Wno-format-nonliteral -Werror -DCHECK_FUNCTION_EXISTS=pthread_create -fPIE -MD -MT CMakeFiles/cmTC_a05eb.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_a05eb.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_a05eb.dir/CheckFunctionExists.c.o -c /home/user/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a05eb
+/home/user/Android/Sdk/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a05eb.dir/link.txt --verbose=1
+/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=x86_64-none-linux-android21 --sysroot=/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -Wall -Wextra -Wwrite-strings -Wpointer-arith -Wimplicit-fallthrough -Wshadow -Wvla -Wformat=2 -Wno-format-nonliteral -Werror -DCHECK_FUNCTION_EXISTS=pthread_create -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments    CMakeFiles/cmTC_a05eb.dir/CheckFunctionExists.c.o -o cmTC_a05eb  -lpthreads -latomic -lm 
 ld: error: unable to find library -lpthreads
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[1]: *** [cmTC_1e3c0] Error 1
-make: *** [cmTC_1e3c0/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_a05eb.dir/build.make:100: cmTC_a05eb] Error 1
+gmake[1]: Leaving directory '/home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_a05eb/fast] Error 2
 
 
 
 Determining if the function pthread_create exists in the pthread failed with the following output:
-Change Dir: /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp
+Change Dir: /home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_36504/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_36504.dir/build.make CMakeFiles/cmTC_36504.dir/build
-Building C object CMakeFiles/cmTC_36504.dir/CheckFunctionExists.c.o
-/Users/19690612/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=x86_64-none-linux-android21 --sysroot=/Users/19690612/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -Wall -Wextra -Wwrite-strings -Wpointer-arith -Wimplicit-fallthrough -Wshadow -Wvla -Wformat=2 -Wno-format-nonliteral -Werror -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -fPIE -MD -MT CMakeFiles/cmTC_36504.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_36504.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_36504.dir/CheckFunctionExists.c.o -c /usr/local/Cellar/cmake/3.22.2/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTC_36504
-/usr/local/Cellar/cmake/3.22.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36504.dir/link.txt --verbose=1
-/Users/19690612/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=x86_64-none-linux-android21 --sysroot=/Users/19690612/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fexceptions -Wall -Wextra -Wwrite-strings -Wpointer-arith -Wimplicit-fallthrough -Wshadow -Wvla -Wformat=2 -Wno-format-nonliteral -Werror -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections  CMakeFiles/cmTC_36504.dir/CheckFunctionExists.c.o -o cmTC_36504  -lpthread  -latomic -lm 
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e9931/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e9931.dir/build.make CMakeFiles/cmTC_e9931.dir/build
+gmake[1]: Entering directory '/home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e9931.dir/CheckFunctionExists.c.o
+/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=x86_64-none-linux-android21 --sysroot=/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -Wall -Wextra -Wwrite-strings -Wpointer-arith -Wimplicit-fallthrough -Wshadow -Wvla -Wformat=2 -Wno-format-nonliteral -Werror -DCHECK_FUNCTION_EXISTS=pthread_create -fPIE -MD -MT CMakeFiles/cmTC_e9931.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_e9931.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_e9931.dir/CheckFunctionExists.c.o -c /home/user/Android/Sdk/cmake/3.22.1/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e9931
+/home/user/Android/Sdk/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9931.dir/link.txt --verbose=1
+/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin/clang --target=x86_64-none-linux-android21 --sysroot=/home/user/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -Wall -Wextra -Wwrite-strings -Wpointer-arith -Wimplicit-fallthrough -Wshadow -Wvla -Wformat=2 -Wno-format-nonliteral -Werror -DCHECK_FUNCTION_EXISTS=pthread_create -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments    CMakeFiles/cmTC_e9931.dir/CheckFunctionExists.c.o -o cmTC_e9931  -lpthread -latomic -lm 
 ld: error: unable to find library -lpthread
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make[1]: *** [cmTC_36504] Error 1
-make: *** [cmTC_36504/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_e9931.dir/build.make:100: cmTC_e9931] Error 1
+gmake[1]: Leaving directory '/home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_e9931/fast] Error 2
 
 
 

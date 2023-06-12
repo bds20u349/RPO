@@ -48,27 +48,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /home/user/Android/Sdk/cmake/3.22.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /home/user/Android/Sdk/cmake/3.22.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/19690612/Desktop/rpo22/libs/mbedtls/mbedtls
+CMAKE_SOURCE_DIR = /home/user/Projects/RPO/libs/mbedtls/mbedtls
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64
+CMAKE_BINARY_DIR = /home/user/Projects/RPO/libs/mbedtls/build/x86_64
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/local/Cellar/cmake/3.22.2/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/user/Android/Sdk/cmake/3.22.1/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/user/Android/Sdk/cmake/3.22.1/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,44 +97,44 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
+	/home/user/Android/Sdk/cmake/3.22.1/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -P cmake_install.cmake
+	/home/user/Android/Sdk/cmake/3.22.1/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/user/Android/Sdk/cmake/3.22.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/user/Android/Sdk/cmake/3.22.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/user/Android/Sdk/cmake/3.22.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.22.2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/user/Android/Sdk/cmake/3.22.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/CMakeFiles /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles /home/user/Projects/RPO/libs/mbedtls/build/x86_64//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Projects/RPO/libs/mbedtls/build/x86_64/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -173,6 +173,19 @@ mbedtls_test: cmake_check_build_system
 mbedtls_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/build
 .PHONY : mbedtls_test/fast
+
+#=============================================================================
+# Target rules for targets named mbedtls_test_helpers
+
+# Build rule for target.
+mbedtls_test_helpers: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mbedtls_test_helpers
+.PHONY : mbedtls_test_helpers
+
+# fast build rule for target.
+mbedtls_test_helpers/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test_helpers.dir/build.make CMakeFiles/mbedtls_test_helpers.dir/build
+.PHONY : mbedtls_test_helpers/fast
 
 #=============================================================================
 # Target rules for targets named apidoc
@@ -355,6 +368,19 @@ fuzz_x509csr: cmake_check_build_system
 fuzz_x509csr/fast:
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_x509csr.dir/build.make programs/fuzz/CMakeFiles/fuzz_x509csr.dir/build
 .PHONY : fuzz_x509csr/fast
+
+#=============================================================================
+# Target rules for targets named fuzz_pkcs7
+
+# Build rule for target.
+fuzz_pkcs7: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fuzz_pkcs7
+.PHONY : fuzz_pkcs7
+
+# fast build rule for target.
+fuzz_pkcs7/fast:
+	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/build.make programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/build
+.PHONY : fuzz_pkcs7/fast
 
 #=============================================================================
 # Target rules for targets named fuzz_privkey
@@ -994,6 +1020,19 @@ generate_query_config_c/fast:
 .PHONY : generate_query_config_c/fast
 
 #=============================================================================
+# Target rules for targets named query_included_headers
+
+# Build rule for target.
+query_included_headers: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 query_included_headers
+.PHONY : query_included_headers
+
+# fast build rule for target.
+query_included_headers/fast:
+	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/query_included_headers.dir/build.make programs/test/CMakeFiles/query_included_headers.dir/build
+.PHONY : query_included_headers/fast
+
+#=============================================================================
 # Target rules for targets named selftest
 
 # Build rule for target.
@@ -1186,6 +1225,30 @@ tests/src/asn1_helpers.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/asn1_helpers.c.s
 .PHONY : tests/src/asn1_helpers.c.s
 
+tests/src/bignum_helpers.o: tests/src/bignum_helpers.c.o
+.PHONY : tests/src/bignum_helpers.o
+
+# target to build an object file
+tests/src/bignum_helpers.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/bignum_helpers.c.o
+.PHONY : tests/src/bignum_helpers.c.o
+
+tests/src/bignum_helpers.i: tests/src/bignum_helpers.c.i
+.PHONY : tests/src/bignum_helpers.i
+
+# target to preprocess a source file
+tests/src/bignum_helpers.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/bignum_helpers.c.i
+.PHONY : tests/src/bignum_helpers.c.i
+
+tests/src/bignum_helpers.s: tests/src/bignum_helpers.c.s
+.PHONY : tests/src/bignum_helpers.s
+
+# target to generate assembly for a file
+tests/src/bignum_helpers.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/bignum_helpers.c.s
+.PHONY : tests/src/bignum_helpers.c.s
+
 tests/src/certs.o: tests/src/certs.c.o
 .PHONY : tests/src/certs.o
 
@@ -1282,6 +1345,30 @@ tests/src/drivers/test_driver_aead.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_aead.c.s
 .PHONY : tests/src/drivers/test_driver_aead.c.s
 
+tests/src/drivers/test_driver_asymmetric_encryption.o: tests/src/drivers/test_driver_asymmetric_encryption.c.o
+.PHONY : tests/src/drivers/test_driver_asymmetric_encryption.o
+
+# target to build an object file
+tests/src/drivers/test_driver_asymmetric_encryption.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_asymmetric_encryption.c.o
+.PHONY : tests/src/drivers/test_driver_asymmetric_encryption.c.o
+
+tests/src/drivers/test_driver_asymmetric_encryption.i: tests/src/drivers/test_driver_asymmetric_encryption.c.i
+.PHONY : tests/src/drivers/test_driver_asymmetric_encryption.i
+
+# target to preprocess a source file
+tests/src/drivers/test_driver_asymmetric_encryption.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_asymmetric_encryption.c.i
+.PHONY : tests/src/drivers/test_driver_asymmetric_encryption.c.i
+
+tests/src/drivers/test_driver_asymmetric_encryption.s: tests/src/drivers/test_driver_asymmetric_encryption.c.s
+.PHONY : tests/src/drivers/test_driver_asymmetric_encryption.s
+
+# target to generate assembly for a file
+tests/src/drivers/test_driver_asymmetric_encryption.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_asymmetric_encryption.c.s
+.PHONY : tests/src/drivers/test_driver_asymmetric_encryption.c.s
+
 tests/src/drivers/test_driver_cipher.o: tests/src/drivers/test_driver_cipher.c.o
 .PHONY : tests/src/drivers/test_driver_cipher.o
 
@@ -1305,6 +1392,30 @@ tests/src/drivers/test_driver_cipher.s: tests/src/drivers/test_driver_cipher.c.s
 tests/src/drivers/test_driver_cipher.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_cipher.c.s
 .PHONY : tests/src/drivers/test_driver_cipher.c.s
+
+tests/src/drivers/test_driver_key_agreement.o: tests/src/drivers/test_driver_key_agreement.c.o
+.PHONY : tests/src/drivers/test_driver_key_agreement.o
+
+# target to build an object file
+tests/src/drivers/test_driver_key_agreement.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_key_agreement.c.o
+.PHONY : tests/src/drivers/test_driver_key_agreement.c.o
+
+tests/src/drivers/test_driver_key_agreement.i: tests/src/drivers/test_driver_key_agreement.c.i
+.PHONY : tests/src/drivers/test_driver_key_agreement.i
+
+# target to preprocess a source file
+tests/src/drivers/test_driver_key_agreement.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_key_agreement.c.i
+.PHONY : tests/src/drivers/test_driver_key_agreement.c.i
+
+tests/src/drivers/test_driver_key_agreement.s: tests/src/drivers/test_driver_key_agreement.c.s
+.PHONY : tests/src/drivers/test_driver_key_agreement.s
+
+# target to generate assembly for a file
+tests/src/drivers/test_driver_key_agreement.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_key_agreement.c.s
+.PHONY : tests/src/drivers/test_driver_key_agreement.c.s
 
 tests/src/drivers/test_driver_key_management.o: tests/src/drivers/test_driver_key_management.c.o
 .PHONY : tests/src/drivers/test_driver_key_management.o
@@ -1353,6 +1464,30 @@ tests/src/drivers/test_driver_mac.s: tests/src/drivers/test_driver_mac.c.s
 tests/src/drivers/test_driver_mac.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_mac.c.s
 .PHONY : tests/src/drivers/test_driver_mac.c.s
+
+tests/src/drivers/test_driver_pake.o: tests/src/drivers/test_driver_pake.c.o
+.PHONY : tests/src/drivers/test_driver_pake.o
+
+# target to build an object file
+tests/src/drivers/test_driver_pake.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_pake.c.o
+.PHONY : tests/src/drivers/test_driver_pake.c.o
+
+tests/src/drivers/test_driver_pake.i: tests/src/drivers/test_driver_pake.c.i
+.PHONY : tests/src/drivers/test_driver_pake.i
+
+# target to preprocess a source file
+tests/src/drivers/test_driver_pake.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_pake.c.i
+.PHONY : tests/src/drivers/test_driver_pake.c.i
+
+tests/src/drivers/test_driver_pake.s: tests/src/drivers/test_driver_pake.c.s
+.PHONY : tests/src/drivers/test_driver_pake.s
+
+# target to generate assembly for a file
+tests/src/drivers/test_driver_pake.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/drivers/test_driver_pake.c.s
+.PHONY : tests/src/drivers/test_driver_pake.c.s
 
 tests/src/drivers/test_driver_signature.o: tests/src/drivers/test_driver_signature.c.o
 .PHONY : tests/src/drivers/test_driver_signature.o
@@ -1498,6 +1633,30 @@ tests/src/random.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test.dir/build.make CMakeFiles/mbedtls_test.dir/tests/src/random.c.s
 .PHONY : tests/src/random.c.s
 
+tests/src/test_helpers/ssl_helpers.o: tests/src/test_helpers/ssl_helpers.c.o
+.PHONY : tests/src/test_helpers/ssl_helpers.o
+
+# target to build an object file
+tests/src/test_helpers/ssl_helpers.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test_helpers.dir/build.make CMakeFiles/mbedtls_test_helpers.dir/tests/src/test_helpers/ssl_helpers.c.o
+.PHONY : tests/src/test_helpers/ssl_helpers.c.o
+
+tests/src/test_helpers/ssl_helpers.i: tests/src/test_helpers/ssl_helpers.c.i
+.PHONY : tests/src/test_helpers/ssl_helpers.i
+
+# target to preprocess a source file
+tests/src/test_helpers/ssl_helpers.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test_helpers.dir/build.make CMakeFiles/mbedtls_test_helpers.dir/tests/src/test_helpers/ssl_helpers.c.i
+.PHONY : tests/src/test_helpers/ssl_helpers.c.i
+
+tests/src/test_helpers/ssl_helpers.s: tests/src/test_helpers/ssl_helpers.c.s
+.PHONY : tests/src/test_helpers/ssl_helpers.s
+
+# target to generate assembly for a file
+tests/src/test_helpers/ssl_helpers.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mbedtls_test_helpers.dir/build.make CMakeFiles/mbedtls_test_helpers.dir/tests/src/test_helpers/ssl_helpers.c.s
+.PHONY : tests/src/test_helpers/ssl_helpers.c.s
+
 tests/src/threading_helpers.o: tests/src/threading_helpers.c.o
 .PHONY : tests/src/threading_helpers.o
 
@@ -1558,6 +1717,7 @@ help:
 	@echo "... fuzz_client"
 	@echo "... fuzz_dtlsclient"
 	@echo "... fuzz_dtlsserver"
+	@echo "... fuzz_pkcs7"
 	@echo "... fuzz_privkey"
 	@echo "... fuzz_pubkey"
 	@echo "... fuzz_server"
@@ -1579,6 +1739,7 @@ help:
 	@echo "... mbedtls"
 	@echo "... mbedtls_static"
 	@echo "... mbedtls_test"
+	@echo "... mbedtls_test_helpers"
 	@echo "... mbedx509"
 	@echo "... mbedx509_static"
 	@echo "... md_hmac_demo"
@@ -1591,6 +1752,7 @@ help:
 	@echo "... pk_verify"
 	@echo "... psa_constant_names"
 	@echo "... query_compile_time_config"
+	@echo "... query_included_headers"
 	@echo "... req_app"
 	@echo "... rsa_decrypt"
 	@echo "... rsa_encrypt"
@@ -1614,6 +1776,9 @@ help:
 	@echo "... tests/src/asn1_helpers.o"
 	@echo "... tests/src/asn1_helpers.i"
 	@echo "... tests/src/asn1_helpers.s"
+	@echo "... tests/src/bignum_helpers.o"
+	@echo "... tests/src/bignum_helpers.i"
+	@echo "... tests/src/bignum_helpers.s"
 	@echo "... tests/src/certs.o"
 	@echo "... tests/src/certs.i"
 	@echo "... tests/src/certs.s"
@@ -1626,15 +1791,24 @@ help:
 	@echo "... tests/src/drivers/test_driver_aead.o"
 	@echo "... tests/src/drivers/test_driver_aead.i"
 	@echo "... tests/src/drivers/test_driver_aead.s"
+	@echo "... tests/src/drivers/test_driver_asymmetric_encryption.o"
+	@echo "... tests/src/drivers/test_driver_asymmetric_encryption.i"
+	@echo "... tests/src/drivers/test_driver_asymmetric_encryption.s"
 	@echo "... tests/src/drivers/test_driver_cipher.o"
 	@echo "... tests/src/drivers/test_driver_cipher.i"
 	@echo "... tests/src/drivers/test_driver_cipher.s"
+	@echo "... tests/src/drivers/test_driver_key_agreement.o"
+	@echo "... tests/src/drivers/test_driver_key_agreement.i"
+	@echo "... tests/src/drivers/test_driver_key_agreement.s"
 	@echo "... tests/src/drivers/test_driver_key_management.o"
 	@echo "... tests/src/drivers/test_driver_key_management.i"
 	@echo "... tests/src/drivers/test_driver_key_management.s"
 	@echo "... tests/src/drivers/test_driver_mac.o"
 	@echo "... tests/src/drivers/test_driver_mac.i"
 	@echo "... tests/src/drivers/test_driver_mac.s"
+	@echo "... tests/src/drivers/test_driver_pake.o"
+	@echo "... tests/src/drivers/test_driver_pake.i"
+	@echo "... tests/src/drivers/test_driver_pake.s"
 	@echo "... tests/src/drivers/test_driver_signature.o"
 	@echo "... tests/src/drivers/test_driver_signature.i"
 	@echo "... tests/src/drivers/test_driver_signature.s"
@@ -1653,6 +1827,9 @@ help:
 	@echo "... tests/src/random.o"
 	@echo "... tests/src/random.i"
 	@echo "... tests/src/random.s"
+	@echo "... tests/src/test_helpers/ssl_helpers.o"
+	@echo "... tests/src/test_helpers/ssl_helpers.i"
+	@echo "... tests/src/test_helpers/ssl_helpers.s"
 	@echo "... tests/src/threading_helpers.o"
 	@echo "... tests/src/threading_helpers.i"
 	@echo "... tests/src/threading_helpers.s"

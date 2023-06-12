@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.22.2/bin/cmake
+CMAKE_COMMAND = /home/user/Android/Sdk/cmake/3.22.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
+RM = /home/user/Android/Sdk/cmake/3.22.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/19690612/Desktop/rpo22/libs/mbedtls/mbedtls
+CMAKE_SOURCE_DIR = /home/user/Projects/RPO/libs/mbedtls/mbedtls
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64
+CMAKE_BINARY_DIR = /home/user/Projects/RPO/libs/mbedtls/build/x86_64
 
 # Utility rule file for lib.
 
@@ -79,10 +79,10 @@ library/CMakeFiles/lib.dir/build: lib
 .PHONY : library/CMakeFiles/lib.dir/build
 
 library/CMakeFiles/lib.dir/clean:
-	cd /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/library && $(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean.cmake
+	cd /home/user/Projects/RPO/libs/mbedtls/build/x86_64/library && $(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean.cmake
 .PHONY : library/CMakeFiles/lib.dir/clean
 
 library/CMakeFiles/lib.dir/depend:
-	cd /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/19690612/Desktop/rpo22/libs/mbedtls/mbedtls /Users/19690612/Desktop/rpo22/libs/mbedtls/mbedtls/library /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64 /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/library /Users/19690612/Desktop/rpo22/libs/mbedtls/build/x86_64/library/CMakeFiles/lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/Projects/RPO/libs/mbedtls/build/x86_64 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/Projects/RPO/libs/mbedtls/mbedtls /home/user/Projects/RPO/libs/mbedtls/mbedtls/library /home/user/Projects/RPO/libs/mbedtls/build/x86_64 /home/user/Projects/RPO/libs/mbedtls/build/x86_64/library /home/user/Projects/RPO/libs/mbedtls/build/x86_64/library/CMakeFiles/lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : library/CMakeFiles/lib.dir/depend
 
